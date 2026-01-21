@@ -171,3 +171,43 @@ boring code
   </script>
 </body>
 </html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Loading…</title>
+  <style>
+    html,body{height:100%;margin:0;display:flex;align-items:center;justify-content:center;background:#f7f9fc;font-family:system-ui}
+    .loader{padding:14px;background:#fff;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+  </style>
+</head>
+<body>
+  <div class="loader">Loading MarvelousMaksimgames…</div>
+  <script>
+    // Minor deterrents (easy to bypass)
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', e => {
+      if (e.key === 'F12' || (e.ctrlKey && (e.key==='u' || (e.shiftKey && (e.key==='I' || e.key==='J'))))) {
+        e.preventDefault(); e.stopPropagation();
+      }
+    });
+
+    // Fetch base64 content and inject into page
+    fetch('content.b64', {cache:'no-store'}).then(r => {
+      if(!r.ok) throw new Error('failed');
+      return r.text();
+    }).then(b64 => {
+      // remove whitespace/newlines
+      b64 = b64.replace(/\s+/g, '');
+      const html = atob(b64);
+      document.open();
+      document.write(html);
+      document.close();
+    }).catch(err => {
+      console.error(err);
+      document.body.innerHTML = '<div style="padding:20px;background:#fff;border-radius:8px">Failed to load content.</div>';
+    });
+  </script>
+</body>
+</html>
