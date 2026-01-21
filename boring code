@@ -1,0 +1,173 @@
+boring code
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sort the Court — MarvelousMaksimgames</title>
+  <meta name="description" content="Sort the Court — curated landing page by MarvelousMaksimgames." />
+  <style>
+    :root{
+      --accent:#0b66ff;
+      --accent-dark:#084fc6;
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --muted:#546070;
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:linear-gradient(180deg,var(--bg) 0%, #ffffff 100%);
+      color:#0b2135;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:48px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+    }
+    .wrap{
+      width:100%;
+      max-width:980px;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(12,32,63,0.08);
+      overflow:hidden;
+      display:flex;
+      gap:0;
+    }
+    .left{
+      flex:1 1 560px;
+      padding:36px;
+    }
+    .right{
+      width:360px;
+      background:linear-gradient(180deg, #081029 0%, #0b2a4f 100%);
+      color:#fff;
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:18px;
+    }
+    h1{
+      margin:0 0 8px 0;
+      font-size:30px;
+      line-height:1.05;
+    }
+    .byline{
+      margin:0 0 18px 0;
+      color:var(--muted);
+      font-size:15px;
+    }
+    .desc{ color:var(--muted); margin-bottom:22px; font-size:15px; }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 18px;
+      background:var(--accent);
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+      font-weight:700;
+      box-shadow:0 8px 18px rgba(11,102,255,0.12);
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover{ transform:translateY(-2px); box-shadow:0 14px 30px rgba(11,102,255,0.16); }
+    .meta { display:flex; gap:10px; align-items:center; color:var(--muted); font-size:13px; }
+    .badge{
+      background:#ff5a5f; color:white; font-weight:700; padding:4px 8px; border-radius:999px; font-size:12px;
+    }
+    .screenshot{
+      width:100%;
+      height:220px;
+      background:linear-gradient(90deg,#e6eefc,#fff);
+      border-radius:10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#7b8aa8;
+      font-weight:600;
+      margin-bottom:18px;
+      border:1px solid #e6eefc;
+    }
+    .credit{ font-size:13px; color:var(--muted); margin-top:10px;}
+    footer{ font-size:13px; color:#9aa6b8; text-align:center; padding:18px 0 6px; }
+    a.credit-link { color:var(--accent); text-decoration:underline; font-weight:600; }
+    @media (max-width:880px){
+      .wrap{ flex-direction:column; padding:0;}
+      .right{ width:100%; border-top-left-radius:0; border-top-right-radius:0; padding:20px;}
+      .left{ padding:20px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main" aria-labelledby="title">
+    <div class="left">
+      <h1 id="title">Sort the Court</h1>
+      <p class="byline">Presented by <strong>MarvelousMaksimgames</strong></p>
+
+      <div class="screenshot" aria-hidden="true">
+        Game preview — replace this box with a screenshot/image
+      </div>
+
+      <p class="desc">
+        Sort the Court is a charming medieval kingdom management game where you judge visitors' fates.
+        This is a curated landing page by MarvelousMaksimgames — a fresh landing page separate from itch.io.
+      </p>
+
+      <!-- PLAY BUTTON: set to the official itch.io page (safe) -->
+      <a id="playBtn" class="btn" href="https://graebor.itch.io/sort-the-court" target="_blank" rel="noopener noreferrer" aria-label="Play Sort the Court (opens in new tab)">
+        ▶ Play (opens in new tab)
+      </a>
+
+      <p class="credit">
+        Original page: <a class="credit-link" href="https://graebor.itch.io/sort-the-court" target="_blank" rel="noopener noreferrer">Sort the Court on itch.io</a>
+      </p>
+
+      <div style="margin-top:18px" class="meta">
+        <span class="badge">FEATURED</span>
+        <span>Curated by MarvelousMaksimgames</span>
+      </div>
+    </div>
+
+    <aside class="right" aria-label="About MarvelousMaksimgames">
+      <h2 style="margin:0 0 8px 0">MarvelousMaksimgames</h2>
+      <p style="margin:0 0 12px 0; color:rgba(255,255,255,0.85)">Hand-picked indie games, reviews, and curated play links.</p>
+
+      <p style="margin:0 0 8px 0; font-size:13px">
+        Contact:
+        <br />
+        <a href="mailto:hello@marvelousmaksimgames.example" style="color:#bfe1ff; text-decoration:underline">hello@marvelousmaksimgames.example</a>
+      </p>
+
+      <p style="margin:8px 0 0 0; font-size:13px; color:rgba(255,255,255,0.85)">
+        Hosted as a separate landing page.
+      </p>
+    </aside>
+  </div>
+
+  <footer>
+    Host this file on GitHub Pages, Netlify, or Vercel. To change the Play destination, edit the href on the link with id="playBtn".
+  </footer>
+
+  <script>
+    // Minimal script: no token appending, no placeholders.
+    // If you want the Play link to point somewhere else, change the href directly in the HTML above.
+    (function(){
+      const btn = document.getElementById('playBtn');
+      if(!btn) return;
+      // Basic safety check: ensure href is a valid absolute URL
+      try {
+        const u = new URL(btn.href);
+      } catch (e) {
+        console.warn('playBtn href is not a valid absolute URL:', btn.href);
+      }
+    })();
+  </script>
+</body>
+</html>
